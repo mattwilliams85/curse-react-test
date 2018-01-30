@@ -43,10 +43,11 @@ export class Sidebar extends React.Component<CombinedTypes, any> {
     let query = games.filter((item) => item.Name.toLowerCase().indexOf(string) === 0);
 
     if (!string) { query = games; };
+    if (!e.currentTarget.value) { query = undefined; }
 
     this.setState({
       gameQuery: query,
-    })
+    });
   }
 
   render() {
