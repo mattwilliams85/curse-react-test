@@ -21,6 +21,16 @@ export class GameInfo extends React.Component<CombinedTypes, void> {
         { selected.Name ? 
           <div>
             <div className="list">
+              <h3>Voice Support</h3>
+              <div className="selectable capitalize">{selected.SupportsVoice.toString()}</div>
+            </div>
+
+            <div className="list">
+              <h3>Addon Support</h3>
+              <div className="selectable capitalize">{selected.SupportsAddons.toString()}</div>
+            </div>
+
+            <div className="list">
               <h3>Slug</h3>
               <div className="selectable">{selected.Slug}</div>
             </div>
@@ -46,7 +56,6 @@ export class GameInfo extends React.Component<CombinedTypes, void> {
                 </div>
                 : null }
             </div>
-
           </div>
         : null}
       </div>

@@ -31,6 +31,10 @@ h1, h2, h3 {
     margin: 0 0 0 3px;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 .loader-wrap {
     display: flex;
     flex-direction: column;
