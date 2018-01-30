@@ -1,0 +1,104 @@
+.Sidebar {
+  top: 0;
+  left: 0;
+  width: 320px;
+  background: #1b2026;
+  position: absolute;
+
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    font-size: 20px;
+    margin: 0px 0 0 35px;
+
+    img {
+      height: 40px;
+      margin: 0 15px 0 0;
+    }
+  }
+
+  .scrollable {
+    padding-top: 15px;
+    position: fixed;
+    width: 320px;
+    height: calc(100% - 122px);
+    background: #1b2026;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #171b20;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: #666;
+    }
+  }
+
+  .game-wrap {
+    display: flex;
+    cursor: pointer;
+    transition: .3s;
+    padding: 9px 15px;
+
+    &:hover, &.active {
+      background: #272e36;
+    }
+  }
+
+  .sub-text {
+    color: #62758b;
+    font-size: 9pt;
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 15px 0 0;
+  }
+
+  .search-wrap {
+    display: flex;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 20px;
+      height: 30px;
+      background: url(../../../assets/images/search.svg);
+      position: absolute;
+      right: 25px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      top: 5px;
+    }
+
+    &.active:after {
+       display: none;
+    }
+
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+  .search {
+    background: #2c333d;
+    border: 1px solid #4d5763;
+    height: 30px;
+    padding: 0 10px;
+    width: 100%;
+    margin: 0px 15px 20px 15px;
+    color: white;
+    font-size: 14px;
+  }
+
+  .support {
+    color: rgb(47, 218  , 132);
+  }
+}
